@@ -1,0 +1,13 @@
+<form name="subscribeForm"{% assign subscribe_action_is_not_empty = site.footer.subscribe_action | is_not_empty %}{% if subscribe_action_is_not_empty %} action="{{ site.footer.subscribe_action }}"{% endif %} method="POST" data-netlify-honeypot="bot-field" data-netlify="true" class="subscribe-form">
+  <div class="screen-reader-text">
+    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+  </div>
+  <div class="form-group">
+    <label>
+      <span class="screen-reader-text">Email address</span>
+      <input type="email" name="email" placeholder="Your email address" required>
+    </label>
+  </div>
+  <input type="hidden" name="form-name" value="subscribeForm" />
+  <button class="button" type="submit">Subscribe</button>
+</form><!-- .subscribe-form -->
